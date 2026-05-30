@@ -1815,8 +1815,8 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
 
   /* Flip cards – mobile sizing */
   .netflixCard {
-    width: 160px;
-    height: 265px;
+    width: 150px;
+    height: 250px;
     border-radius: 20px;
   }
 
@@ -1909,8 +1909,8 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
   .othersCard,
   .crunchyrollCard,
   .primeCard {
-    width: 160px;
-    height: 265px;
+    width: 150px;
+    height: 250px;
     border-radius: 20px;
   }
 
