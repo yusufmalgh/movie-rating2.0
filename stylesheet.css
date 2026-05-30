@@ -1821,18 +1821,18 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
     padding: 7px 16px;
     font-size: 13px;
   }
-
-  /* Flip cards â€“ mobile sizing */
-  .netflixCard {
-    width: 172px;
-    height: 310px;
-    border-radius: 20px;
-  }
-
-  .cardFront,
+.cardFront,
   .cardBack {
     border-radius: 20px;
   }
+  /* Flip cards â€“ mobile sizing */
+  .netflixCard {
+   width: 166px;
+    height: 270px;
+    border-radius: 20px;
+  }
+
+  
 
   .netflixCardImg {
     height: calc(100% - 58px);
@@ -1939,7 +1939,7 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
   
   #allGrid {
     grid-template-columns: repeat(2, minmax(130px, 1fr));
-    gap: 16px;
+    gap: 30px;
     padding: 20px 14px 42px;
   }
 
@@ -1964,9 +1964,18 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
     max-width: 280px;
   }
 
-  .netflixCard {
-    width: 156px;
-    height: 295px;
+   .netflixCard {
+    width: 172px;
+    height: 310px;
+    border-radius: 20px;
+  }
+
+  .netflixCardImg {
+    height: calc(100% - 58px);
+  }
+
+  .netflixCardRating {
+    height: 58px;
   }
 
   .appleTvCard,
@@ -1980,8 +1989,8 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
   }
 
   #allGrid {
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 20px;
   }
 }
 
