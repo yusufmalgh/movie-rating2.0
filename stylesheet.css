@@ -1642,10 +1642,10 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
   #Movies-body .allControls-right,
   #shows_BODY .allControls-right {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: flex-start;
     gap: 10px;
-    max-width: 100%;
+    max-width: 90%;
   }
 
   /* Search field */
@@ -1654,6 +1654,7 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
     flex: 1 1 60%;
     max-width: 260px;
     margin: 0;
+    max-width:90%;
   }
 
   /* NAV + HERO (homepage) */
@@ -1814,8 +1815,8 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
 
   /* Flip cards – mobile sizing */
   .netflixCard {
-    width: 166px;
-    height: 270px;
+    width: 160px;
+    height: 265px;
     border-radius: 20px;
   }
 
@@ -1908,8 +1909,8 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
   .othersCard,
   .crunchyrollCard,
   .primeCard {
-    width: 166px;
-    height: 270px;
+    width: 160px;
+    height: 265px;
     border-radius: 20px;
   }
 
@@ -1929,7 +1930,7 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
 
   #allGrid {
     grid-template-columns: repeat(2, minmax(130px, 1fr));
-    gap: 27px;
+    gap: 30px;
     padding: 20px 14px 42px;
   }
 
