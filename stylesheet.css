@@ -1665,6 +1665,17 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
     gap: 16px;
   }
 
+  /* Right group: Shows, Movies, Theme toggle */
+#homepage_NAVBAR .links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* pull the whole group left a bit */
+  transform: translateX(-40px);
+  margin-left: 40px; /* counteract the first link's left margin */
+}
+
+
   #homepage_LOGO {
     font-size: 18px;
   }
@@ -1932,6 +1943,7 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
     font-size: 14px;
   }
 }
+
 /* =========================================================
    VERY SMALL MOBILE (â‰¤ 420px)
 ========================================================= */
