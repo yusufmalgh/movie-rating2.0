@@ -1929,7 +1929,7 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
 
   #allGrid {
     grid-template-columns: repeat(2, minmax(130px, 1fr));
-    gap: 16px;
+    gap: 25px;
     padding: 20px 14px 42px;
   }
 
