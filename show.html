@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest Rated Shows</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body id="shows_BODY">
+
+<section id="allControls" class="allControls">
+  <div class="allControls-left">
+    <input
+      id="allSearch"
+      type="search"
+      placeholder="Search by title…"
+      autocomplete="off"
+    />
+  </div>
+  <div class="allControls-right">
+    <button class="allFilter allFilter-active" data-filter="all">All</button>
+    <button class="allFilter" data-filter="Netflix">Netflix</button>
+    <button class="allFilter" data-filter="Prime Video">Prime</button>
+    <button class="allFilter" data-filter="OSN">OSN</button>
+    <button class="allFilter" data-filter="Apple TV">Apple TV</button>
+    <button class="allFilter" data-filter="Crunchyroll">Crunchyroll</button>
+    <button class="allFilter" data-filter="Cinema">Cinema</button>
+    <button class="allFilter" data-filter="Others">Others</button>
+  </div>
+</section>
+
+<header>
+    <nav class="header-nav" aria-label="Main header">
+        <a href="index.html" class="close-button" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </a>
+        <h1 class="header-title">Highest Rated Shows</h1>
+    </nav>
+</header>
+
+<div id="allGrid">
+
+    <!-- 1–10 with badges -->
+    <div>
+        <div class="badge">1</div>
+        <div class="netflixCard"
+             data-title="Mr. Robot"
+             data-genre="Tech Thriller"
+             data-rating="11.0"
+             data-description="Hacker with social anxiety joins cyber‑revolution against powerful corporations."
+             data-platform="Prime Video">
+            <img src="Prime tv assets/mr.robot.jpg" alt="Mr. Robot">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">2</div>
+        <div class="netflixCard"
+             data-title="Arcane"
+             data-genre="Animated Fantasy"
+             data-rating="10.0"
+             data-description="Sisters Vi and Jinx land on opposite sides of conflict."
+             data-platform="Netflix">
+            <img src="Netflix assets/arcane.jpg" alt="Arcane">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">3</div>
+        <div class="netflixCard"
+             data-title="Attack on Titan"
+             data-genre="Anime Action"
+             data-rating="10.0"
+             data-description="Humanity fights Titans while uncovering dark truths about their world."
+             data-platform="Crunchyroll">
+            <img src="Crunchyroll assets /attackontitan.jpg" alt="Attack on Titan">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">4</div>
+        <div class="netflixCard"
+             data-title="Six Feet Under"
+             data-genre="Drama"
+             data-rating="9.9"
+             data-description="Funeral‑home family explores life, death, and everything in between."
+             data-platform="OSN">
+            <img src="OSN assets /sixfeetunder.jpg" alt="Six Feet Under">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">5</div>
+        <div class="netflixCard"
+             data-title="Death Note"
+             data-genre="Anime Thriller"
+             data-rating="9.8"
+             data-description="Student finds notebook that kills anyone whose name is written."
+             data-platform="Netflix">
+            <img src="Netflix assets/deathnote.jpg" alt="Death Note">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">6</div>
+        <div class="netflixCard"
+             data-title="The Leftovers"
+             data-genre="Mystery Drama"
+             data-rating="9.8"
+             data-description="After 2% vanish, survivors struggle with grief, faith, and meaning."
+             data-platform="OSN">
+            <img src="OSN assets /theleftovers.jpg" alt="The Leftovers">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">7</div>
+        <div class="netflixCard"
+             data-title="Chernobyl"
+             data-genre="Historical Drama"
+             data-rating="9.8"
+             data-description="Dramatization of the Chernobyl nuclear disaster and heroic containment efforts."
+             data-platform="OSN">
+            <img src="OSN assets /chernobyl.jpg" alt="Chernobyl">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">8</div>
+        <div class="netflixCard"
+             data-title="Fleabag"
+             data-genre="Comedy Drama"
+             data-rating="9.7"
+             data-description="Dry‑witted woman navigates grief, relationships, and messy adulthood."
+             data-platform="Prime Video">
+            <img src="Prime tv assets/fleabag.jpg" alt="Fleabag">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">9</div>
+        <div class="netflixCard"
+             data-title="You"
+             data-genre="Psychological Thriller"
+             data-rating="9.6"
+             data-description="Charming but dangerous man becomes obsessively involved with partners."
+             data-platform="Netflix">
+            <img src="Netflix assets/you.jpg" alt="You">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">10</div>
+        <div class="netflixCard"
+             data-title="Dark"
+             data-genre="Sci‑Fi Mystery"
+             data-rating="9.6"
+             data-description="Four families entangled across time after a child disappears."
+             data-platform="Netflix">
+            <img src="Netflix assets/dark.jpg" alt="Dark">
+        </div>
+    </div>
+
+    <!-- Rest of shows (no badges, just cards) -->
+
+    <div>
+        <div class="netflixCard"
+             data-title="Dexter: Resurrection"
+             data-genre="Crime Drama"
+             data-rating="9.5"
+             data-description="Dexter returns to confront his past and a new threat."
+             data-platform="Others">
+            <img src="Others assets/dexterresurruction.jpg" alt="Dexter Resurrection">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="When They See Us"
+             data-genre="Drama"
+             data-rating="9.4"
+             data-description="Central Park Five are wrongfully convicted and fight for justice."
+             data-platform="Netflix">
+            <img src="Netflix assets/whentheyseeus.jpg" alt="When They See Us">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Black Mirror"
+             data-genre="Sci‑Fi Anthology"
+             data-rating="9.4"
+             data-description="Standalone episodes explore technology’s dark side and twisted futures."
+             data-platform="Netflix">
+            <img src="Netflix assets/blackmirror.jpg" alt="Black Mirror">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Dark Matter"
+             data-genre="Sci‑Fi Thriller"
+             data-rating="9.4"
+             data-description="Physicist enters alternate life and fights to return home."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/darkmatter.jpg" alt="Dark Matter">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Last Days of Ptolemy Grey"
+             data-genre="Drama"
+             data-rating="9.4"
+             data-description="Man with dementia regains memories briefly to solve a mystery."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/lastdayofptolemygrey.jpg" alt="The Last Days of Ptolemy Grey">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Solo Leveling"
+             data-genre="Anime Fantasy"
+             data-rating="9.3"
+             data-description="Weak hunter gains power letting him grow infinitely stronger."
+             data-platform="Crunchyroll">
+            <img src="Crunchyroll assets /sololeveling.jpg" alt="Solo Leveling">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Mob Psycho 100"
+             data-genre="Anime"
+             data-rating="9.3"
+             data-description="Quiet psychic boy balances spirits, emotions, and normal life."
+             data-platform="Netflix">
+            <img src="Netflix assets/mobpsycho100.jpg" alt="Mob Psycho 100">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Severance"
+             data-genre="Sci‑Fi Mystery"
+             data-rating="9.3"
+             data-description="Workers with split memories uncover a disturbing corporate secret."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/severance.jpg" alt="Severance">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Vinland Saga"
+             data-genre="Anime Historical"
+             data-rating="9.2"
+             data-description="Young warrior seeks revenge in a brutal Viking world."
+             data-platform="Netflix">
+            <img src="Netflix assets/vinlandsaga.jpg" alt="Vinland Saga">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Dexter: New Blood"
+             data-genre="Crime Drama"
+             data-rating="9.2"
+             data-description="Dexter’s quiet small‑town life crumbles as past returns."
+             data-platform="Others">
+            <img src="Others assets/dexternewblood.jpg" alt="Dexter New Blood">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Crown"
+             data-genre="Historical Drama"
+             data-rating="9.2"
+             data-description="Dramatizes the reign and life of Queen Elizabeth II."
+             data-platform="Netflix">
+            <img src="Netflix assets/the crown.jpg" alt="The Crown">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Maid"
+             data-genre="Drama"
+             data-rating="9.1"
+             data-description="Young mother cleans houses to build a better life."
+             data-platform="Netflix">
+            <img src="Netflix assets/maid.jpg" alt="Maid">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Mouse"
+             data-genre="Crime Thriller"
+             data-rating="9.1"
+             data-description="Murders raise questions about psychopathic genes and human destiny."
+             data-platform="Others">
+            <img src="Others assets/mouse.jpg" alt="Mouse">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Snowpiercer"
+             data-genre="Sci‑Fi"
+             data-rating="9.0"
+             data-description="Last humans live on a class‑divided train circling Earth."
+             data-platform="Netflix">
+            <img src="Netflix assets/snowpiercer.jpg" alt="Snowpiercer">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Silo"
+             data-genre="Dystopian Sci‑Fi"
+             data-rating="9.0"
+             data-description="Underground silo resident questions the truth about their world."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/silo.png" alt="Silo">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Fallout"
+             data-genre="Post‑apocalyptic"
+             data-rating="8.9"
+             data-description="Vault dwellers explore the dangerous wasteland after nuclear devastation."
+             data-platform="Prime Video">
+            <img src="Prime tv assets/fallout.webp" alt="Fallout">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Tokyo Ghoul"
+             data-genre="Anime Horror"
+             data-rating="8.9"
+             data-description="Student becomes half‑ghoul and must survive between two worlds."
+             data-platform="Others">
+            <img src="Others assets/tokyoghoul.jpg" alt="Tokyo Ghoul">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Bodies"
+             data-genre="Sci‑Fi Crime"
+             data-rating="8.7"
+             data-description="Detectives in four eras investigate the same mysterious body."
+             data-platform="Netflix">
+            <img src="Netflix assets/bodies.jpeg" alt="Bodies">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Presumed Innocent"
+             data-genre="Legal Thriller"
+             data-rating="8.7"
+             data-description="Prosecutor becomes prime suspect in a shocking murder case."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/presumedinnocent.jpg" alt="Presumed Innocent">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="For All Mankind"
+             data-genre="Sci‑Fi Drama"
+             data-rating="8.7"
+             data-description="Alternate‑history space race imagines if it never ended."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/forallmankind.jpg" alt="For All Mankind">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Band of Brothers"
+             data-genre="War Drama"
+             data-rating="8.7"
+             data-description="Follows Easy Company’s journey through World War II."
+             data-platform="OSN">
+            <img src="OSN assets /bandofbrothers.jpg" alt="Band of Brothers">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Trying"
+             data-genre="Comedy Drama"
+             data-rating="8.6"
+             data-description="Couple navigates adoption and realities of building a family."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/trying.jpg" alt="Trying">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Barry"
+             data-genre="Dark Comedy"
+             data-rating="8.6"
+             data-description="Hitman tries leaving his past behind by pursuing acting."
+             data-platform="OSN">
+            <img src="OSN assets /barry.webp" alt="Barry">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Last of Us"
+             data-genre="Post‑apocalyptic Drama"
+             data-rating="8.6"
+             data-description="Joel and Ellie travel across ruined America facing dangers together."
+             data-platform="OSN">
+            <img src="OSN assets /thelastofus.jpg" alt="The Last of Us">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="High Water"
+             data-genre="Disaster Drama"
+             data-rating="8.5"
+             data-description="Scientists and officials respond to a catastrophic flood threat."
+             data-platform="Netflix">
+            <img src="Netflix assets/highwater.jpg" alt="High Water">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Supacell"
+             data-genre="Sci‑Fi"
+             data-rating="8.5"
+             data-description="Ordinary South London residents discover they suddenly have superpowers."
+             data-platform="Netflix">
+            <img src="Netflix assets/supacell.jpg" alt="Supacell">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Mare of Easttown"
+             data-genre="Crime Drama"
+             data-rating="8.4"
+             data-description="Small‑town detective investigates murder while her personal life unravels."
+             data-platform="OSN">
+            <img src="OSN assets /mareofeasttown.jpg" alt="Mare of Easttown">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Cross"
+             data-genre="Crime Thriller"
+             data-rating="8.4"
+             data-description="Detective Alex Cross hunts dangerous criminals in a gritty underworld."
+             data-platform="Prime Video">
+            <img src="Prime tv assets/cross.jpg" alt="Cross">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Utopia"
+             data-genre="Conspiracy Thriller"
+             data-rating="8.3"
+             data-description="Fans discover a graphic novel predicting real‑world disasters."
+             data-platform="Prime Video">
+            <img src="Prime tv assets/utopia.jpg" alt="Utopia">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Adolescence"
+             data-genre="Drama"
+             data-rating="8.2"
+             data-description="Drama about youth, identity, and pressures of growing up."
+             data-platform="Netflix">
+            <img src="Netflix assets/adolescence.jpg" alt="Adolescence">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="La Palma"
+             data-genre="Drama"
+             data-rating="8.2"
+             data-description="A couple’s relationship is tested during an unusual trip."
+             data-platform="Netflix">
+            <img src="Netflix assets/lapalma.jpg" alt="La Palma">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="From"
+             data-genre="Horror Mystery"
+             data-rating="8.1"
+             data-description="Strangers trapped in a town are hunted after dark."
+             data-platform="OSN">
+            <img src="OSN assets /from.jpg" alt="From">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Squid Game"
+             data-genre="Survival Thriller"
+             data-rating="8.0"
+             data-description="Debtors play deadly children's games for a massive prize."
+             data-platform="Netflix">
+            <img src="Netflix assets/squidgame.jpg" alt="Squid Game">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Black Bird"
+             data-genre="Crime Thriller"
+             data-rating="8.0"
+             data-description="Convict offered freedom for befriending a suspected serial killer."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/blackbird.jpg" alt="Black Bird">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Defending Jacob"
+             data-genre="Crime Drama"
+             data-rating="8.0"
+             data-description="Prosecutor’s son accused of murder, tearing the family apart."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/defendingjacob.jpg" alt="Defending Jacob">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Jackal"
+             data-genre="Crime Thriller"
+             data-rating="7.8"
+             data-description="A dangerous criminal known as the Jackal threatens everything."
+             data-platform="OSN">
+            <img src="OSN assets /jackal.jpeg" alt="Jackal">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="AlRawabi School for Girls"
+             data-genre="Drama"
+             data-rating="7.8"
+             data-description="Bullied girl at elite school plans revenge on tormentors."
+             data-platform="Netflix">
+            <img src="Netflix assets/alrawabischoolforgirls.jpg" alt="AlRawabi School for Girls">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Beast Games"
+             data-genre="Reality Competition"
+             data-rating="7.5"
+             data-description="Contestants endure brutal challenges in a high‑stakes competition."
+             data-platform="Prime Video">
+            <img src="Prime tv assets/beastgames.jpeg" alt="Beast Games">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Rain"
+             data-genre="Post‑apocalyptic"
+             data-rating="7.6"
+             data-description="Deadly rain virus wipes out many; survivors search for answers."
+             data-platform="Netflix">
+            <img src="Netflix assets/therain.jpg" alt="The Rain">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="I Know This Much Is True"
+             data-genre="Drama"
+             data-rating="7.1"
+             data-description="Man cares for schizophrenic twin while confronting personal trauma."
+             data-platform="OSN">
+            <img src="OSN assets /iknowthismuchistrue.jpg" alt="I Know This Much Is True">
+        </div>
+    </div>
+
+</div>
+
+<script>
+  // Build flip cards
+  document.querySelectorAll(".netflixCard").forEach(card => {
+    const originalImg = card.querySelector("img");
+    if (!originalImg) return;
+
+    const isMoviesPage = document.body.id === "Movies-body";
+
+    const title       = card.dataset.title       || (isMoviesPage ? "Movie" : "Show");
+    const genre       = card.dataset.genre       || (isMoviesPage ? "Movie" : "Show");
+    const ratingRaw   = Number(card.dataset.rating || 0);
+    const rating      = Math.max(0, Math.min(10, ratingRaw));
+    const description = card.dataset.description ||
+      (isMoviesPage
+        ? "A selected movie from your personal ratings collection."
+        : "A selected show from your personal ratings collection.");
+    const platform    = card.dataset.platform    || "Mixed Platforms";
+
+    const imageSrc = originalImg.getAttribute("src");
+    const imageAlt = originalImg.getAttribute("alt") || title;
+    const scorePct = Math.round(Math.max(0, Math.min(100, rating * 10)));
+
+    card.innerHTML = `
+      <div class="cardInner">
+        <div class="cardFront">
+          <div class="netflixCardImg">
+            <img src="${imageSrc}" alt="${imageAlt}" loading="lazy">
+            <div class="posterShade"></div>
+          </div>
+          <div class="netflixCardRating"
+               style="--score: ${scorePct};"
+               data-score="${rating.toFixed(1)}">
+            <span>${getRatingLabel(rating)}</span>
+          </div>
+        </div>
+
+        <div class="cardBack">
+          <p class="backEyebrow">${platform}</p>
+          <h3>${title}</h3>
+          <p class="backDescription">${description}</p>
+
+          <div class="cardMeta">
+            <span class="metaChip metaChip-platform">${platform}</span>
+            <span>${genre}</span>
+            <span>${getRatingLabel(rating)}</span>
+            <!-- removed: <span>${rating.toFixed(1)} / 10</span> -->
+          </div>
+
+          <div class="backRating" style="--score: ${scorePct};">
+            <strong>${rating.toFixed(1)}</strong>
+            <small>/10</small>
+          </div>
+
+          <p class="tapHint">Tap again to flip back</p>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener("click", () => {
+      card.classList.toggle("is-flipped");
+    });
+  });
+
+  function getRatingLabel(score) {
+    if (score >= 9.5) return "Legendary";
+    if (score >= 9)   return "Masterpiece";
+    if (score >= 8)   return "Excellent";
+    if (score >= 7)   return "Good";
+    if (score >= 5)   return "Average";
+    return "Low Rated";
+  }
+
+  // Filters + search (All Movies / All Shows only)
+  (function () {
+    const body = document.body;
+    const isAllPage =
+      body.id === "Movies-body" || body.id === "shows_BODY";
+    if (!isAllPage) return;
+
+    const cards = Array.from(document.querySelectorAll("#allGrid .netflixCard"));
+    const searchInput = document.getElementById("allSearch");
+    const filterButtons = Array.from(document.querySelectorAll(".allFilter"));
+
+    let activePlatform = "all";
+    let searchTerm = "";
+
+    function normalize(str) {
+      return (str || "").toLowerCase().trim();
+    }
+
+    function applyFilters() {
+      const term = normalize(searchTerm);
+
+      cards.forEach(card => {
+        const platform = card.dataset.platform || "";
+        const title = card.dataset.title || "";
+
+        const platformMatch =
+          activePlatform === "all" || platform === activePlatform;
+
+        const searchMatch =
+          !term || normalize(title).includes(term);
+
+        const visible = platformMatch && searchMatch;
+
+        // Hide the outer wrapper <div> that contains badge + card
+        const wrapper = card.parentElement; 
+        if (wrapper) {
+          wrapper.classList.toggle("is-hidden", !visible);
+        }
+      });
+    }
+
+    // Filter buttons
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const val = btn.getAttribute("data-filter") || "all";
+        activePlatform = val;
+
+        filterButtons.forEach(b => b.classList.remove("allFilter-active"));
+        btn.classList.add("allFilter-active");
+
+        applyFilters();
+      });
+    });
+
+    // Live search
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        searchTerm = e.target.value || "";
+        applyFilters();
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

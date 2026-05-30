@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crunchyroll Shows</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body id="crunchyrollBody" data-accent="crunchyroll">
+
+    <div id="crunchyrollHeader">
+        <a href="index.html">
+            <img class="crunchyrollHeaderIcon" src="Assets/home.png" alt="Home">
+        </a>
+        <a href="NETFLIX shows.html">
+            <img class="crunchyrollHeaderIcon" src="Assets/Netflixs.png" alt="Netflix">
+        </a>
+        <a>
+            <img id="crunchyrollIconCrunchyroll"
+                 class="crunchyrollHeaderIcon crunchyrollMain"
+                 src="Assets/crunchyroll.png"
+                 alt="Crunchyroll">
+        </a>
+        <a href="PRIME shows.html">
+            <img class="crunchyrollHeaderIcon" src="Assets/prime video.webp" alt="Prime Video">
+        </a>
+        <a href="APPLE TV shows.html">
+            <img class="crunchyrollHeaderIcon" src="Assets/apple tv.png" alt="Apple TV">
+        </a>
+        <a href="OSN shows.html">
+            <img class="crunchyrollHeaderIcon" src="Assets/osn.jpg" alt="OSN">
+        </a>
+        <a href="Cinema.html">
+            <img class="crunchyrollHeaderIcon" src="Assets/cinema.jpg" alt="Cinema">
+        </a>
+        <a href="Others Shows.html">
+            <img class="crunchyrollHeaderIcon" src="Assets/others.png" alt="Others">
+        </a>
+    </div>
+
+    <main class="crunchyrollPage">
+
+        <section class="crunchyrollHero">
+            <p class="crunchyrollEyebrow">Your personal Crunchyroll collection</p>
+            <h1>Crunchyroll<br>Shows</h1>
+            <p>Browse your rated Crunchyroll anime series. Click any poster to flip the card and reveal more details.</p>
+        </section>
+
+        <div id="crunchyrollSwitch">
+            <a class="crunchyrollSwitchActive" href="Crunchyroll shows.html">Series</a>
+            <a class="crunchyrollSwitchInactive">Movies</a>
+        </div>
+
+        <!-- ANIME -->
+        <section id="crunchyrollAnime" class="crunchyrollSection">
+            <div class="sectionHeader">
+                <h2 class="crunchyrollSectionTitle">Anime</h2>
+                <span>Top anime picks</span>
+            </div>
+
+            <div class="crunchyrollGrid">
+                <div class="netflixCard"
+                     data-title="Attack on Titan"
+                     data-genre="Anime Action"
+                     data-rating="10.0"
+                     data-description="Humanity fights Titans while uncovering shocking truths about their world."
+                     data-platform="Crunchyroll">
+                    <img src="Crunchyroll assets /attackontitan.jpg" alt="Attack on Titan">
+                </div>
+
+                <div class="netflixCard"
+                     data-title="Solo Leveling"
+                     data-genre="Anime Fantasy"
+                     data-rating="9.3"
+                     data-description="A weak hunter gains limitless power."
+                     data-platform="Crunchyroll">
+                    <img src="Crunchyroll assets /sololeveling.jpg" alt="Solo Leveling">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="crunchyrollFooter">© 2025 Your Ratings</div>
+
+    <script>
+      // Build flip cards (shared logic, customized per page by data attributes)
+      document.querySelectorAll(".netflixCard").forEach(card => {
+        const originalImg = card.querySelector("img");
+        if (!originalImg) return;
+
+        const isMoviesPage = document.body.id === "Movies-body";
+
+        const title       = card.dataset.title       || (isMoviesPage ? "Movie" : "Show");
+        const genre       = card.dataset.genre       || (isMoviesPage ? "Movie" : "Show");
+        const ratingRaw   = Number(card.dataset.rating || 0);
+        const rating      = Math.max(0, Math.min(10, ratingRaw));
+        const description = card.dataset.description ||
+          (isMoviesPage
+            ? "A selected movie from your personal ratings collection."
+            : "A selected show from your personal ratings collection.");
+        const platform    = card.dataset.platform    || "Crunchyroll";
+
+        const imageSrc = originalImg.getAttribute("src");
+        const imageAlt = originalImg.getAttribute("alt") || title;
+        const scorePct = Math.round(Math.max(0, Math.min(100, rating * 10)));
+
+        card.innerHTML = `
+          <div class="cardInner">
+            <div class="cardFront">
+              <div class="netflixCardImg">
+                <img src="${imageSrc}" alt="${imageAlt}" loading="lazy">
+                <div class="posterShade"></div>
+              </div>
+              <div class="netflixCardRating"
+                   style="--score: ${scorePct};"
+                   data-score="${rating.toFixed(1)}">
+                <span>${getRatingLabel(rating)}</span>
+              </div>
+            </div>
+
+            <div class="cardBack">
+              <p class="backEyebrow">${platform}</p>
+              <h3>${title}</h3>
+              <p class="backDescription">${description}</p>
+
+              <div class="cardMeta">
+                <span class="metaChip metaChip-platform">${platform}</span>
+                <span>${genre}</span>
+                <span>${getRatingLabel(rating)}</span>
+              </div>
+
+              <div class="backRating" style="--score: ${scorePct};">
+                <strong>${rating.toFixed(1)}</strong>
+                <small>/10</small>
+              </div>
+
+              <p class="tapHint">Tap again to flip back</p>
+            </div>
+          </div>
+        `;
+
+        card.addEventListener("click", () => {
+          card.classList.toggle("is-flipped");
+        });
+      });
+
+      function getRatingLabel(score) {
+        if (score >= 9.5) return "Legendary";
+        if (score >= 9)   return "Masterpiece";
+        if (score >= 8)   return "Excellent";
+        if (score >= 7)   return "Good";
+        if (score >= 5)   return "Average";
+        return "Low Rated";
+      }
+    </script>
+
+</body>
+</html>

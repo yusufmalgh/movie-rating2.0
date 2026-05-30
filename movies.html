@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest Rated Movies</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body id="Movies-body">
+
+    <section id="allControls" class="allControls">
+  <div class="allControls-left">
+    <input
+      id="allSearch"
+      type="search"
+      placeholder="Search by title…"
+      autocomplete="off"
+    />
+  </div>
+  <div class="allControls-right">
+    <button class="allFilter allFilter-active" data-filter="all">All</button>
+    <button class="allFilter" data-filter="Netflix">Netflix</button>
+    <button class="allFilter" data-filter="Prime Video">Prime</button>
+    <button class="allFilter" data-filter="OSN">OSN</button>
+    <button class="allFilter" data-filter="Apple TV">Apple TV</button>
+    <button class="allFilter" data-filter="Crunchyroll">Crunchyroll</button>
+    <button class="allFilter" data-filter="Cinema">Cinema</button>
+    <button class="allFilter" data-filter="Others">Others</button>
+  </div>
+</section>
+
+<header>
+    <nav class="header-nav" aria-label="Main header">
+        <a href="index.html" class="close-button" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </a>
+        <h1 class="header-title">Highest Rated Movies</h1>
+    </nav>
+</header>
+
+<div id="allGrid">
+
+    <!-- 10.0 – 9.9 -->
+    <div>
+        <div class="badge">1</div>
+        <div class="netflixCard"
+             data-title="The Dark Knight Rises"
+             data-genre="Superhero"
+             data-rating="10.0"
+             data-description="Batman returns from exile to stop Bane and save Gotham."
+             data-platform="OSN">
+            <img src="OSN assets /thedarkknightrises.jpg" alt="The Dark Knight Rises">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">2</div>
+        <div class="netflixCard"
+             data-title="The Dark Knight"
+             data-genre="Superhero"
+             data-rating="9.9"
+             data-description="Joker pushes Gotham and Batman to their moral limits."
+             data-platform="OSN">
+            <img src="OSN assets /thedarkknight.jpg" alt="The Dark Knight">
+        </div>
+    </div>
+
+    <!-- 9.7 -->
+    <div>
+        <div class="badge">3</div>
+        <div class="netflixCard"
+             data-title="Get Out"
+             data-genre="Horror Thriller"
+             data-rating="9.7"
+             data-description="Visit to girlfriend’s family becomes a disturbing psychological nightmare."
+             data-platform="Netflix">
+            <img src="Netflix assets/getout.jpg" alt="Get Out">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">4</div>
+        <div class="netflixCard"
+             data-title="Howl's Moving Castle"
+             data-genre="Fantasy"
+             data-rating="9.7"
+             data-description="Cursed young woman meets a wizard in a moving castle."
+             data-platform="Netflix">
+            <img src="Netflix assets/howlsmovingcastle.webp" alt="Howl's Moving Castle">
+        </div>
+    </div>
+
+    <!-- 9.5 – 9.4 -->
+    <div>
+        <div class="badge">5</div>
+        <div class="netflixCard"
+             data-title="Dune"
+             data-genre="Sci‑Fi Epic"
+             data-rating="9.5"
+             data-description="Paul Atreides faces destiny and danger on desert planet Arrakis."
+             data-platform="Cinema">
+            <img src="Cenima assets/dune1.jpg" alt="Dune">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">6</div>
+        <div class="netflixCard"
+             data-title="Forgotten"
+             data-genre="Mystery Thriller"
+             data-rating="9.4"
+             data-description="Brother’s strange return leads to uncovering a shocking conspiracy."
+             data-platform="Netflix">
+            <img src="Netflix assets/forgotten.jpg" alt="Forgotten">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">7</div>
+        <div class="netflixCard"
+             data-title="The Martian"
+             data-genre="Sci‑Fi"
+             data-rating="9.4"
+             data-description="Stranded astronaut uses ingenuity to survive alone on Mars."
+             data-platform="Netflix">
+            <img src="Netflix assets/themartian.jpg" alt="The Martian">
+        </div>
+    </div>
+
+    <!-- 9.3 – 9.2 with badges -->
+    <div>
+        <div class="badge">8</div>
+        <div class="netflixCard"
+             data-title="The Hunger Games"
+             data-genre="Sci‑Fi Action"
+             data-rating="9.3"
+             data-description="Katniss fights to survive a deadly televised arena."
+             data-platform="Netflix">
+            <img src="Netflix assets/thehungergames.jpg" alt="The Hunger Games">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">9</div>
+        <div class="netflixCard"
+             data-title="Prisoners"
+             data-genre="Crime Thriller"
+             data-rating="9.3"
+             data-description="Two missing girls drive a tense investigation and desperate father."
+             data-platform="Netflix">
+            <img src="Netflix assets/prisoners.jpg" alt="Prisoners">
+        </div>
+    </div>
+
+    <div>
+        <div class="badge">10</div>
+        <div class="netflixCard"
+             data-title="Suzume"
+             data-genre="Fantasy"
+             data-rating="9.2"
+             data-description="Girl travels Japan closing supernatural doors causing disasters."
+             data-platform="Netflix">
+            <img src="Netflix assets/suzume.jpg" alt="Suzume">
+        </div>
+    </div>
+
+    <!-- 9.2 (no badge) -->
+    <div>
+        <div class="netflixCard"
+             data-title="Tenet"
+             data-genre="Sci‑Fi Thriller"
+             data-rating="9.2"
+             data-description="Time inversion and espionage collide to stop global catastrophe."
+             data-platform="OSN">
+            <img src="OSN assets /tenet.jpeg" alt="Tenet">
+        </div>
+    </div>
+
+    <!-- 9.1 -->
+    <div>
+        <div class="netflixCard"
+             data-title="Project Hail Mary"
+             data-genre="Sci‑Fi"
+             data-rating="9.1"
+             data-description="Amnesiac astronaut discovers mission that could save humanity."
+             data-platform="Cinema">
+            <img src="Cenima assets/projecthailmary.jpg" alt="Project Hail Mary">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Hidden Figures"
+             data-genre="Biographical Drama"
+             data-rating="9.1"
+             data-description="Black women mathematicians help NASA during the Space Race."
+             data-platform="Netflix">
+            <img src="Netflix assets/hiddenfigures.jpg" alt="Hidden Figures">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Gorge"
+             data-genre="Thriller"
+             data-rating="9.1"
+             data-description="Two operatives guarding a gorge uncover a deadly secret."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/thegorge.jpg" alt="The Gorge">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Batman Begins"
+             data-genre="Superhero"
+             data-rating="9.1"
+             data-description="Bruce Wayne becomes Batman to fight Gotham’s criminal corruption."
+             data-platform="OSN">
+            <img src="OSN assets /batmanbegins.jpg" alt="Batman Begins">
+        </div>
+    </div>
+
+    <!-- 9.0 -->
+    <div>
+        <div class="netflixCard"
+             data-title="Lou"
+             data-genre="Action Thriller"
+             data-rating="9.0"
+             data-description="Mysterious woman helps track a kidnapped girl through storm."
+             data-platform="Netflix">
+            <img src="Netflix assets/lou.jpg" alt="Lou">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Dune: Part Two"
+             data-genre="Sci‑Fi Epic"
+             data-rating="9.0"
+             data-description="Paul’s Fremen journey continues as war and prophecy reshape Arrakis."
+             data-platform="Cinema">
+            <img src="Cenima assets/dune2.jpg" alt="Dune Part Two">
+        </div>
+    </div>
+
+    <!-- 8.9 -->
+    <div>
+        <div class="netflixCard"
+             data-title="Don't Move"
+             data-genre="Horror Thriller"
+             data-rating="8.9"
+             data-description="Paralyzing toxin turns escape into a terrifying survival challenge."
+             data-platform="Netflix">
+            <img src="Netflix assets/dontmove.jpg" alt="Don't Move">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Spirited Away"
+             data-genre="Fantasy"
+             data-rating="8.9"
+             data-description="Girl enters spirit world to save her transformed parents."
+             data-platform="Netflix">
+            <img src="Netflix assets/spiritedaway.jpg" alt="Spirited Away">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Beekeeper"
+             data-genre="Action Thriller"
+             data-rating="8.9"
+             data-description="Former operative wages brutal revenge on a scam network."
+             data-platform="Cinema">
+            <img src="Cenima assets/thebeekeeper.jpg" alt="The Beekeeper">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Boy and the Heron"
+             data-genre="Anime Fantasy"
+             data-rating="8.9"
+             data-description="Boy enters a strange world guided by a heron."
+             data-platform="Cinema">
+            <img src="Cenima assets/theboyandtheheron.jpg" alt="The Boy and the Heron">
+        </div>
+    </div>
+
+    <!-- 8.8 – 8.7 -->
+    <div>
+        <div class="netflixCard"
+             data-title="The Good Nurse"
+             data-genre="Crime Drama"
+             data-rating="8.8"
+             data-description="Nurse suspects coworker is behind suspicious hospital deaths."
+             data-platform="Netflix">
+            <img src="Netflix assets/thegoodnurse.jpg" alt="The Good Nurse">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Lie"
+             data-genre="Psychological Thriller"
+             data-rating="8.8"
+             data-description="Family hides a crime and unravels under guilt."
+             data-platform="Prime Video">
+            <img src="Prime tv assets/thelie.jpg" alt="The Lie">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="I Came By"
+             data-genre="Thriller"
+             data-rating="8.7"
+             data-description="Graffiti artist targets judge and uncovers disturbing secrets."
+             data-platform="Netflix">
+            <img src="Netflix assets/icameby.jpg" alt="I Came By">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Colors of Evil: Red"
+             data-genre="Crime Thriller"
+             data-rating="8.7"
+             data-description="Prosecutor investigates brutal crime tied to larger conspiracy."
+             data-platform="Netflix">
+            <img src="Netflix assets/colorsofevilred.jpg" alt="Colors of Evil: Red">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Wonka"
+             data-genre="Family Musical"
+             data-rating="8.7"
+             data-description="Young Willy Wonka chases dream of opening a chocolate shop."
+             data-platform="Cinema">
+            <img src="Cenima assets/willywonka.jpg" alt="Wonka">
+        </div>
+    </div>
+
+    <!-- 8.6 – 8.5 -->
+    <div>
+        <div class="netflixCard"
+             data-title="The Maze Runner"
+             data-genre="Sci‑Fi Action"
+             data-rating="8.6"
+             data-description="Teens trapped in a deadly maze fight to escape."
+             data-platform="Netflix">
+            <img src="Netflix assets/mazerunner.jpg" alt="The Maze Runner">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Interceptor"
+             data-genre="Action"
+             data-rating="8.5"
+             data-description="Soldier defends missile base from an internal coordinated threat."
+             data-platform="Netflix">
+            <img src="Netflix assets/interceptor.jpg" alt="Interceptor">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Escape Room"
+             data-genre="Thriller"
+             data-rating="8.5"
+             data-description="Contestants discover their escape room experience is actually deadly."
+             data-platform="Netflix">
+            <img src="Netflix assets/escaperoom1.jpg" alt="Escape Room">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Escape Room 2"
+             data-genre="Thriller"
+             data-rating="8.5"
+             data-description="Survivors are forced into another series of lethal rooms."
+             data-platform="Netflix">
+            <img src="Netflix assets/escaperoom2.jpg" alt="Escape Room 2">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Collection"
+             data-genre="Horror Thriller"
+             data-rating="8.5"
+             data-description="Collector traps victims in a deadly maze of devices."
+             data-platform="Cinema">
+            <img src="Cenima assets/thecollection.jpg" alt="The Collection">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Disturbia"
+             data-genre="Thriller"
+             data-rating="8.5"
+             data-description="Teen under house arrest suspects neighbor is a killer."
+             data-platform="Prime Video">
+            <img src="Prime tv assets/disturbia.jpg" alt="Disturbia">
+        </div>
+    </div>
+
+    <!-- 8.3 – 8.2 -->
+    <div>
+        <div class="netflixCard"
+             data-title="Ad Astra"
+             data-genre="Sci‑Fi"
+             data-rating="8.3"
+             data-description="Astronaut travels to find his father and mysterious threat."
+             data-platform="Netflix">
+            <img src="Netflix assets/adastra.jpg" alt="Ad Astra">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Longlegs"
+             data-genre="Horror"
+             data-rating="8.3"
+             data-description="FBI agent investigates serial killer with occult connections."
+             data-platform="Cinema">
+            <img src="Cenima assets/longlegs.jpg" alt="Longlegs">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Palmer"
+             data-genre="Drama"
+             data-rating="8.3"
+             data-description="Former football star rebuilds life, bonding with a boy."
+             data-platform="Apple TV">
+            <img src="Apple tv asset/palmer.jpg" alt="Palmer">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Trap"
+             data-genre="Thriller"
+             data-rating="8.3"
+             data-description="Seemingly normal event hides a carefully planned sinister trap."
+             data-platform="OSN">
+            <img src="OSN assets /trap.jpg" alt="Trap">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Rebel Moon"
+             data-genre="Sci‑Fi Action"
+             data-rating="8.2"
+             data-description="Outsider recruits warriors to fight a tyrannical galactic empire."
+             data-platform="Netflix">
+            <img src="Netflix assets/rebelmoon.webp" alt="Rebel Moon">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="13 Hours"
+             data-genre="War Thriller"
+             data-rating="8.2"
+             data-description="Security team defends a U.S. compound under attack in Libya."
+             data-platform="Netflix">
+            <img src="Netflix assets/13hours.jpg" alt="13 Hours">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Final Destination: Bloodlines"
+             data-genre="Horror"
+             data-rating="8.2"
+             data-description="Death returns with new creative, brutal accidents for survivors."
+             data-platform="Cinema">
+            <img src="Cenima assets/finaldestinationbloodline.jpg" alt="Final Destination Bloodlines">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Amateur"
+             data-genre="Spy Thriller"
+             data-rating="8.2"
+             data-description="CIA cryptographer pursues personal revenge after a tragedy."
+             data-platform="Cinema">
+            <img src="Cenima assets/theamateur.jpg" alt="The Amateur">
+        </div>
+    </div>
+
+    <!-- 8.0 -->
+    <div>
+        <div class="netflixCard"
+             data-title="Godzilla Minus One"
+             data-genre="Kaiju"
+             data-rating="8.0"
+             data-description="Post‑war Japan faces devastating attack from Godzilla."
+             data-platform="Netflix">
+            <img src="Netflix assets/godzillaminus1.jpg" alt="Godzilla Minus One">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Unlocked"
+             data-genre="Thriller"
+             data-rating="8.0"
+             data-description="Stolen phone lets a stranger invade a woman’s life."
+             data-platform="Netflix">
+            <img src="Netflix assets/unlocked.jpg" alt="Unlocked">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Purge"
+             data-genre="Horror Thriller"
+             data-rating="8.0"
+             data-description="During annual Purge, a family desperately defends their home."
+             data-platform="Netflix">
+            <img src="Netflix assets/thepurge.jpg" alt="The Purge">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Sinners"
+             data-genre="Horror"
+             data-rating="8.0"
+             data-description="Stylish horror mixing violence, mystery, and supernatural danger."
+             data-platform="Cinema">
+            <img src="Cenima assets/sinners.jpg" alt="Sinners">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Kung Fu Panda 4"
+             data-genre="Animated"
+             data-rating="8.0"
+             data-description="Po returns for another funny martial‑arts adventure."
+             data-platform="Cinema">
+            <img src="Cenima assets/kungfupanda4.jpg" alt="Kung Fu Panda 4">
+        </div>
+    </div>
+
+    <!-- 7.9 – 7.7 -->
+    <div>
+        <div class="netflixCard"
+             data-title="Zack Snyder's Justice League"
+             data-genre="Superhero"
+             data-rating="7.9"
+             data-description="Justice League unites in darker, extended cut of battle."
+             data-platform="Cinema">
+            <img src="Cenima assets/zacksnydersjusticeleague.jpg" alt="Zack Snyder's Justice League">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Electric State"
+             data-genre="Sci‑Fi"
+             data-rating="7.8"
+             data-description="Girl and robot travel through a retro‑futuristic America."
+             data-platform="Netflix">
+            <img src="Netflix assets/theelectricstate.jpg" alt="The Electric State">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Superman"
+             data-genre="Superhero"
+             data-rating="7.8"
+             data-description="New take on Superman balancing hope and immense power."
+             data-platform="Cinema">
+            <img src="Cenima assets/superman.jpg" alt="Superman">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Lift"
+             data-genre="Heist"
+             data-rating="7.7"
+             data-description="Master thief plans high‑altitude heist aboard a plane."
+             data-platform="Netflix">
+            <img src="Netflix assets/lift.webp" alt="Lift">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Everything Everywhere All at Once"
+             data-genre="Sci‑Fi Comedy"
+             data-rating="7.7"
+             data-description="Overwhelmed woman becomes unlikely hero of the multiverse."
+             data-platform="OSN">
+            <img src="OSN assets /everythingeverywhereallatonce.jpg" alt="Everything Everywhere All at Once">
+        </div>
+    </div>
+
+    <!-- 7.6 – 7.5 -->
+    <div>
+        <div class="netflixCard"
+             data-title="M3GAN"
+             data-genre="Horror"
+             data-rating="7.6"
+             data-description="AI doll becomes dangerously protective of a young girl."
+             data-platform="Netflix">
+            <img src="Netflix assets/m3gan.jpg" alt="M3GAN">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Hunt"
+             data-genre="Satirical Thriller"
+             data-rating="7.5"
+             data-description="Strangers wake up hunted for sport by the elite."
+             data-platform="Netflix">
+            <img src="Netflix assets/thehunt.jpg" alt="The Hunt">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="The Platform 2"
+             data-genre="Sci‑Fi Horror"
+             data-rating="7.5"
+             data-description="Brutal vertical prison returns with new rules and horrors."
+             data-platform="Netflix">
+            <img src="Netflix assets/theplatform2.jpg" alt="The Platform 2">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Synchronic"
+             data-genre="Sci‑Fi Thriller"
+             data-rating="7.5"
+             data-description="Strange drug sends users through time—with deadly consequences."
+             data-platform="Netflix">
+            <img src="Netflix assets/synchronic.jpg" alt="Synchronic">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="It's What's Inside"
+             data-genre="Thriller"
+             data-rating="7.5"
+             data-description="Secrets explode among friends during a strange tech‑driven game."
+             data-platform="Netflix">
+            <img src="Netflix assets/itswhatsinside.jpg" alt="It's What's Inside">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Roofman"
+             data-genre="Crime Thriller"
+             data-rating="7.5"
+             data-description="Fugitive hides in plain sight, staying ahead of authorities."
+             data-platform="Cinema">
+            <img src="Cenima assets/roofman.jpg" alt="Roofman">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Michael"
+             data-genre="Historical Drama"
+             data-rating="7.5"
+             data-description="Early life of Michael Jackson, from discovery of his talent."
+             data-platform="Others">
+            <img src="Others assets/michael.jpg" alt="Michael">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Killers of the Flower Moon"
+             data-genre="Historical Crime"
+             data-rating="7.5"
+             data-description="Greed and murder target the Osage Nation for oil."
+             data-platform="Cinema">
+            <img src="Cenima assets/killeroftheflowermoon.jpg" alt="Killers of the Flower Moon">
+        </div>
+    </div>
+
+    <!-- 7.4 – 7.3 -->
+    <div>
+        <div class="netflixCard"
+             data-title="Under Paris"
+             data-genre="Thriller"
+             data-rating="7.4"
+             data-description="Deadly shark in the Seine threatens major triathlon event."
+             data-platform="Netflix">
+            <img src="Netflix assets/underparis.jpg" alt="Under Paris">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Silenced"
+             data-genre="Drama"
+             data-rating="7.3"
+             data-description="Teacher exposes school abuse, battling an entrenched corrupt system."
+             data-platform="Netflix">
+            <img src="Netflix assets/silenced.jpg" alt="Silenced">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Apocalypse Z"
+             data-genre="Zombie Thriller"
+             data-rating="7.3"
+             data-description="Humanity faces an outbreak turning people into relentless undead."
+             data-platform="Prime Video">
+            <img src="Prime tv assets/apocalypse z.jpg" alt="Apocalypse Z">
+        </div>
+    </div>
+
+    <!-- 7.2 -->
+    <div>
+        <div class="netflixCard"
+             data-title="In the Tall Grass"
+             data-genre="Horror"
+             data-rating="7.2"
+             data-description="Siblings enter tall grass and find escape nearly impossible."
+             data-platform="Netflix">
+            <img src="Netflix assets/inthetallgrass.jpg" alt="In the Tall Grass">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Captain America: Brave New World"
+             data-genre="Superhero"
+             data-rating="7.2"
+             data-description="New Captain America faces political danger and global threats."
+             data-platform="Cinema">
+            <img src="Cenima assets/captainamericaBNW.jpg" alt="Captain America Brave New World">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Bring Her Back"
+             data-genre="Horror"
+             data-rating="7.2"
+             data-description="Grief and obsession spiral into something deeply unsettling."
+             data-platform="Cinema">
+            <img src="Cenima assets/bringherback.jpg" alt="Bring Her Back">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="No Way Up"
+             data-genre="Survival Thriller"
+             data-rating="7.2"
+             data-description="Crash survivors battle rising water, low oxygen, and predators."
+             data-platform="Cinema">
+            <img src="Cenima assets/nowayup.jpg" alt="No Way Up">
+        </div>
+    </div>
+
+    <!-- 7.1 -->
+    <div>
+        <div class="netflixCard"
+             data-title="Wall to Wall"
+             data-genre="Thriller"
+             data-rating="7.1"
+             data-description="Neighbor dispute escalates into paranoia and serious danger."
+             data-platform="Netflix">
+            <img src="Netflix assets/walltowall.jpg" alt="Wall to Wall">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="No Country for Old Men"
+             data-genre="Crime Thriller"
+             data-rating="7.1"
+             data-description="Hunter finds drug money and becomes target of relentless killer."
+             data-platform="Netflix">
+            <img src="Netflix assets/nocountryforoldmen.jpg" alt="No Country for Old Men">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Fantastic Four"
+             data-genre="Superhero"
+             data-rating="7.1"
+             data-description="Marvel’s first family gains powers and faces cosmic threat."
+             data-platform="Cinema">
+            <img src="Cenima assets/fantasticfour.jpg" alt="Fantastic Four">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Ready or Not"
+             data-genre="Horror Thriller"
+             data-rating="7.1"
+             data-description="Bride’s wedding night becomes deadly hide‑and‑seek ritual."
+             data-platform="Netflix">
+            <img src="Netflix assets/readyornot.jpg" alt="Ready or Not">
+        </div>
+    </div>
+
+    <!-- 7.0 -->
+    <div>
+        <div class="netflixCard"
+             data-title="Moana 2"
+             data-genre="Animated Adventure"
+             data-rating="7.0"
+             data-description="Moana sails again on a new ocean quest."
+             data-platform="Cinema">
+            <img src="Cenima assets/moana2.jpg" alt="Moana 2">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Goodnight Mommy"
+             data-genre="Horror"
+             data-rating="7.0"
+             data-description="Bandaged woman returns; twins suspect she isn’t their mother."
+             data-platform="Prime Video">
+            <img src="Prime tv assets/goodnightmommy.jpg" alt="Goodnight Mommy">
+        </div>
+    </div>
+
+    <!-- 6.x -->
+    <div>
+        <div class="netflixCard"
+             data-title="Civil War"
+             data-genre="War Drama"
+             data-rating="6.7"
+             data-description="Journalists cross divided future America documenting escalating conflict."
+             data-platform="Cinema">
+            <img src="Cenima assets/civilwar.jpg" alt="Civil War">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Avatar"
+             data-genre="Sci‑Fi Adventure"
+             data-rating="6.5"
+             data-description="Human soldier joins alien world and questions his mission."
+             data-platform="Cinema">
+            <img src="Cenima assets/avatar.jpg" alt="Avatar">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Jurassic World Rebirth"
+             data-genre="Sci‑Fi Adventure"
+             data-rating="6.3"
+             data-description="Dinosaurs return as science, danger, and survival collide again."
+             data-platform="Cinema">
+            <img src="Cenima assets/jurassicworldrebirth.jpg" alt="Jurassic World Rebirth">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Five Nights at Freddy's"
+             data-genre="Horror"
+             data-rating="6.3"
+             data-description="Night guard discovers haunted animatronics in abandoned restaurant."
+             data-platform="Cinema">
+            <img src="Cenima assets/fivenightsatfreddys.jpg" alt="Five Nights at Freddy's">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Reptile"
+             data-genre="Crime Thriller"
+             data-rating="6.2"
+             data-description="Detective investigates murder hiding multiple layers of deceit."
+             data-platform="Netflix">
+            <img src="Netflix assets/reptile.jpg" alt="Reptile">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Predator: Badlands"
+             data-genre="Sci‑Fi Action"
+             data-rating="6.2"
+             data-description="Predator hunts in a harsh and unforgiving badlands setting."
+             data-platform="Cinema">
+            <img src="Cenima assets/predatorbadlands.jpg" alt="Predator Badlands">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Blink Twice"
+             data-genre="Thriller"
+             data-rating="6.0"
+             data-description="Luxury island getaway hides something very wrong underneath."
+             data-platform="Cinema">
+            <img src="Cenima assets/blinktwice.jpg" alt="Blink Twice">
+        </div>
+    </div>
+
+    <!-- 5.x and below -->
+    <div>
+        <div class="netflixCard"
+             data-title="The Conjuring: Last Rites"
+             data-genre="Supernatural Horror"
+             data-rating="5.9"
+             data-description="Final terrifying case of hauntings and demonic possession."
+             data-platform="Cinema">
+            <img src="Cenima assets/theconjuringlastrites.jpg" alt="The Conjuring Last Rites">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Infinite Storm"
+             data-genre="Survival Drama"
+             data-rating="5.5"
+             data-description="Climber risks life to save stranger during mountain storm."
+             data-platform="Netflix">
+            <img src="Netflix assets/infinitestorm.jpg" alt="Infinite Storm">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="It Ends With Us"
+             data-genre="Romantic Drama"
+             data-rating="5.0"
+             data-description="Woman confronts cycles of love, trauma, and hard choices."
+             data-platform="Cinema">
+            <img src="Cenima assets/itendswithus.jpg" alt="It Ends With Us">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Madame Web"
+             data-genre="Superhero"
+             data-rating="4.5"
+             data-description="Paramedic develops mysterious future‑linked powers."
+             data-platform="Cinema">
+            <img src="Cenima assets/madameweb.jpg" alt="Madame Web">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Nowhere"
+             data-genre="Survival Thriller"
+             data-rating="3.0"
+             data-description="Pregnant woman survives alone at sea in shipping container."
+             data-platform="Netflix">
+            <img src="Netflix assets/nowhere.jpg" alt="Nowhere">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Smile 2"
+             data-genre="Horror"
+             data-rating="3.0"
+             data-description="Pop star haunted by curse spreading through eerie smiles."
+             data-platform="Cinema">
+            <img src="Cenima assets/smile2.jpg" alt="Smile 2">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Terrifier 3"
+             data-genre="Slasher"
+             data-rating="2.5"
+             data-description="Art the Clown returns in another extreme holiday slasher."
+             data-platform="Cinema">
+            <img src="Cenima assets/terrifier3.jpg" alt="Terrifier 3">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Ballerina"
+             data-genre="Action"
+             data-rating="2.0"
+             data-description="Revenge‑driven assassin moves through a violent underworld."
+             data-platform="Cinema">
+            <img src="Cenima assets/ballerina.jpg" alt="Ballerina">
+        </div>
+    </div>
+
+    <div>
+        <div class="netflixCard"
+             data-title="Saving Bikini Bottom"
+             data-genre="Animated"
+             data-rating="1.5"
+             data-description="SpongeBob and friends try saving Bikini Bottom from trouble."
+             data-platform="Netflix">
+            <img src="Netflix assets/savingbikinibottom.jpg" alt="Saving Bikini Bottom">
+        </div>
+    </div>
+
+</div>
+
+<script>
+  // Build flip cards
+  document.querySelectorAll(".netflixCard").forEach(card => {
+    const originalImg = card.querySelector("img");
+    if (!originalImg) return;
+
+    const isMoviesPage = document.body.id === "Movies-body";
+
+    const title       = card.dataset.title       || (isMoviesPage ? "Movie" : "Show");
+    const genre       = card.dataset.genre       || (isMoviesPage ? "Movie" : "Show");
+    const ratingRaw   = Number(card.dataset.rating || 0);
+    const rating      = Math.max(0, Math.min(10, ratingRaw));
+    const description = card.dataset.description ||
+      (isMoviesPage
+        ? "A selected movie from your personal ratings collection."
+        : "A selected show from your personal ratings collection.");
+    const platform    = card.dataset.platform    || "Mixed Platforms";
+
+    const imageSrc = originalImg.getAttribute("src");
+    const imageAlt = originalImg.getAttribute("alt") || title;
+    const scorePct = Math.round(Math.max(0, Math.min(100, rating * 10)));
+
+    card.innerHTML = `
+      <div class="cardInner">
+        <div class="cardFront">
+          <div class="netflixCardImg">
+            <img src="${imageSrc}" alt="${imageAlt}" loading="lazy">
+            <div class="posterShade"></div>
+          </div>
+          <div class="netflixCardRating"
+               style="--score: ${scorePct};"
+               data-score="${rating.toFixed(1)}">
+            <span>${getRatingLabel(rating)}</span>
+          </div>
+        </div>
+
+        <div class="cardBack">
+          <p class="backEyebrow">${platform}</p>
+          <h3>${title}</h3>
+          <p class="backDescription">${description}</p>
+
+          <div class="cardMeta">
+            <span class="metaChip metaChip-platform">${platform}</span>
+            <span>${genre}</span>
+            <span>${getRatingLabel(rating)}</span>
+            <!-- removed: <span>${rating.toFixed(1)} / 10</span> -->
+          </div>
+
+          <div class="backRating" style="--score: ${scorePct};">
+            <strong>${rating.toFixed(1)}</strong>
+            <small>/10</small>
+          </div>
+
+          <p class="tapHint">Tap again to flip back</p>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener("click", () => {
+      card.classList.toggle("is-flipped");
+    });
+  });
+
+  function getRatingLabel(score) {
+    if (score >= 9.5) return "Legendary";
+    if (score >= 9)   return "Masterpiece";
+    if (score >= 8)   return "Excellent";
+    if (score >= 7)   return "Good";
+    if (score >= 5)   return "Average";
+    return "Low Rated";
+  }
+
+  // Filters + search (All Movies / All Shows only)
+  (function () {
+    const body = document.body;
+    const isAllPage =
+      body.id === "Movies-body" || body.id === "shows_BODY";
+    if (!isAllPage) return;
+
+    const cards = Array.from(document.querySelectorAll("#allGrid .netflixCard"));
+    const searchInput = document.getElementById("allSearch");
+    const filterButtons = Array.from(document.querySelectorAll(".allFilter"));
+
+    let activePlatform = "all";
+    let searchTerm = "";
+
+    function normalize(str) {
+      return (str || "").toLowerCase().trim();
+    }
+
+    function applyFilters() {
+      const term = normalize(searchTerm);
+
+      cards.forEach(card => {
+        const platform = card.dataset.platform || "";
+        const title = card.dataset.title || "";
+
+        const platformMatch =
+          activePlatform === "all" || platform === activePlatform;
+
+        const searchMatch =
+          !term || normalize(title).includes(term);
+
+        const visible = platformMatch && searchMatch;
+
+        // Hide the outer wrapper <div> that contains badge + card
+        const wrapper = card.parentElement; 
+        if (wrapper) {
+          wrapper.classList.toggle("is-hidden", !visible);
+        }
+      });
+    }
+
+    // Filter buttons
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const val = btn.getAttribute("data-filter") || "all";
+        activePlatform = val;
+
+        filterButtons.forEach(b => b.classList.remove("allFilter-active"));
+        btn.classList.add("allFilter-active");
+
+        applyFilters();
+      });
+    });
+
+    // Live search
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        searchTerm = e.target.value || "";
+        applyFilters();
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

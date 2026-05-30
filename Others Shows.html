@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Others Shows</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body id="othersBody">
+
+    <!-- HEADER -->
+    <div id="othersHeader">
+        <a href="index.html">
+            <img class="othersHeaderIcon" src="Assets/home.png" alt="Home">
+        </a>
+
+        <a href="NETFLIX shows.html">
+            <img class="othersHeaderIcon" src="Assets/Netflixs.png" alt="Netflix">
+        </a>
+
+        <a href="Crunchyroll shows.html">
+            <img class="othersHeaderIcon" src="Assets/crunchyroll.png" alt="Crunchyroll">
+        </a>
+
+        <a href="PRIME shows.html">
+            <img class="othersHeaderIcon" src="Assets/prime video.webp" alt="Prime Video">
+        </a>
+
+        <a href="APPLE TV shows.html">
+            <img class="othersHeaderIcon" src="Assets/apple tv.png" alt="Apple TV">
+        </a>
+
+        <a href="OSN shows.html">
+            <img class="othersHeaderIcon" src="Assets/osn.jpg" alt="OSN">
+        </a>
+
+        <a href="Cinema.html">
+            <img class="othersHeaderIcon" src="Assets/cinema.jpg" alt="Cinema">
+        </a>
+
+        <!-- Active Others icon -->
+        <a>
+            <img id="othersIconOthers" class="othersHeaderIcon" src="Assets/others.png" alt="Others">
+        </a>
+    </div>
+
+    <main class="othersPage">
+
+        <!-- HERO -->
+        <section class="othersHero">
+            <p class="othersEyebrow">Your personal mixed‑platform collection</p>
+            <h1>Other Shows</h1>
+            <p>
+                Browse your rated shows from other platforms. Click any poster to flip the card and reveal more details.
+            </p>
+        </section>
+
+        <!-- SWITCH -->
+        <div id="othersSwitch">
+            <a id="othersShowBtn" class="othersSwitchActive" href="Others shows.html">Show</a>
+            <a id="othersMoviesBtn" class="othersSwitchInactive" href="Others movies.html">Movies</a>
+        </div>
+
+        <!-- DRAMA -->
+        <section id="othersDrama" class="othersSection">
+            <div class="sectionHeader">
+                <h2 class="othersSectionTitle">Drama</h2>
+                <span>Intense character stories</span>
+            </div>
+
+            <div class="netflixGrid">
+                <div class="netflixCard"
+                     data-title="Dexter: Resurrection"
+                     data-genre="Crime Drama"
+                     data-rating="9.5"
+                     data-description="Dexter returns to confront new dangers while facing the consequences of his past.">
+                    <img src="Others assets/dexterresurruction.jpg" alt="Dexter: Resurrection">
+                </div>
+
+               
+
+                <div class="netflixCard"
+                     data-title="Dexter: New Blood"
+                     data-genre="Crime Drama"
+                     data-rating="9.2"
+                     data-description="Years after disappearing, Dexter builds a new life—but his dark passenger is never far away.">
+                    <img src="Others assets/dexternewblood.jpg" alt="Dexter: New Blood">
+                </div>
+
+                <div class="netflixCard"
+                     data-title="Mouse"
+                     data-genre="K‑Drama Thriller"
+                     data-rating="9.1"
+                     data-description="A psychological thriller about nature, nurture, and the mind of a killer.">
+                    <img src="Others assets/mouse.jpg" alt="Mouse">
+                </div>
+            </div>
+        </section>
+
+        <!-- ANIME -->
+        <section id="othersAnime" class="othersSection">
+            <div class="sectionHeader">
+                <h2 class="othersSectionTitle">Anime</h2>
+                <span>Stand‑out picks</span>
+            </div>
+
+            <div class="netflixGrid">
+                <div class="netflixCard"
+                     data-title="Tokyo Ghoul"
+                     data-genre="Anime Horror"
+                     data-rating="8.9"
+                     data-description="A college student becomes half‑ghoul and must survive in a dangerous hidden world.">
+                    <img src="Others assets/tokyoghoul.jpg" alt="Tokyo Ghoul">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="othersFooter">© 2025 Your Ratings</div>
+
+    <!-- Flip logic reused from Netflix Series page -->
+    <script>
+  document.querySelectorAll(".netflixCard").forEach(card => {
+    const originalImg = card.querySelector("img");
+    if (!originalImg) return;
+
+    const title       = card.dataset.title       || "Apple TV Movie";
+    const genre       = card.dataset.genre       || "Movie";
+    const ratingRaw   = Number(card.dataset.rating || 0);
+    const rating      = Math.max(0, Math.min(10, ratingRaw));
+    const description = card.dataset.description || "A selected movie from your Apple TV collection.";
+    const imageSrc    = originalImg.getAttribute("src");
+    const imageAlt    = originalImg.getAttribute("alt") || title;
+    const scorePct    = Math.round(Math.max(0, Math.min(100, rating * 10)));
+
+    card.innerHTML = `
+      <div class="cardInner">
+        <div class="cardFront">
+          <div class="netflixCardImg">
+            <img src="${imageSrc}" alt="${imageAlt}" loading="lazy">
+            <div class="posterShade"></div>
+          </div>
+          <div class="netflixCardRating"
+               style="--score: ${scorePct};"
+               data-score="${rating.toFixed(1)}">
+            <span>${getRatingLabel(rating)}</span>
+          </div>
+        </div>
+        <div class="cardBack">
+          <p class="backEyebrow">Apple TV · Movie</p>
+          <h3>${title}</h3>
+          <p class="backDescription">${description}</p>
+          <div class="cardMeta">
+            <span>${genre}</span>
+            <span>${getRatingLabel(rating)}</span>
+            <!-- removed: <span>${rating.toFixed(1)} / 10</span> -->
+          </div>
+          <div class="backRating" style="--score: ${scorePct};">
+            <strong>${rating.toFixed(1)}</strong>
+            <small>/10</small>
+          </div>
+          <p class="tapHint">Tap again to flip back</p>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener("click", () => card.classList.toggle("is-flipped"));
+  });
+
+  function getRatingLabel(score) {
+    if (score >= 9.5) return "Legendary";
+    if (score >= 9)   return "Masterpiece";
+    if (score >= 8)   return "Excellent";
+    if (score >= 7)   return "Good";
+    if (score >= 5)   return "Average";
+    return "Low Rated";
+  }
+</script>
+
+</body>
+</html>

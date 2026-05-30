@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSN Movies</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body id="osnBody" data-accent="osn">
+
+    <!-- HEADER (same structure, OSN active) -->
+    <div id="osnHeader">
+        <a href="index.html">
+            <img class="osnHeaderIcon" src="Assets/home.png" alt="Home">
+        </a>
+
+        <a href="NETFLIX shows.html">
+            <img class="osnHeaderIcon" src="Assets/Netflixs.png" alt="Netflix">
+        </a>
+
+        <a href="Crunchyroll shows.html">
+            <img class="osnHeaderIcon" src="Assets/crunchyroll.png" alt="Crunchyroll">
+        </a>
+
+        <a href="PRIME shows.html">
+            <img class="osnHeaderIcon" src="Assets/prime video.webp" alt="Prime Video">
+        </a>
+
+        <a href="APPLE TV shows.html">
+            <img class="osnHeaderIcon" src="Assets/apple tv.png" alt="Apple TV">
+        </a>
+
+        <!-- Active OSN icon -->
+        <a>
+            <img id="osnIconOsn" class="osnHeaderIcon" src="Assets/osn.jpg" alt="OSN">
+        </a>
+
+        <a href="Cinema.html">
+            <img class="osnHeaderIcon" src="Assets/cinema.jpg" alt="Cinema">
+        </a>
+        
+        <a href="Others Shows.html">
+            <img class="osnHeaderIcon" src="Assets/others.png" alt="Others">
+        </a>
+    </div>
+
+    <main class="osnPage">
+
+        <!-- HERO (same pattern as Netflix) -->
+        <section class="osnHero">
+            <p class="osnEyebrow">Your personal OSN collection</p>
+            <h1>OSN Movies</h1>
+            <p>
+                Browse your rated OSN movies by genre. Click any poster to flip the card and reveal more details.
+            </p>
+        </section>
+
+        <!-- SWITCH -->
+        <div id="osnSwitch">
+            <a class="osnSwitchInactive" href="OSN shows.html">Series</a>
+            <a class="osnSwitchActive" href="OSN movies.html">Movies</a>
+        </div>
+
+        <!-- ACTION -->
+        <section id="osnAction" class="osnSection">
+            <div class="sectionHeader">
+                <h2 class="osnSectionTitle">Action</h2>
+                <span>Dark Knight trilogy</span>
+            </div>
+
+            <div class="netflixGrid">
+                <div class="netflixCard"
+                     data-title="Batman Begins"
+                     data-genre="Action"
+                     data-rating="9.1"
+                     data-description="Bruce Wayne becomes Batman and confronts the League of Shadows.">
+                    <img src="OSN assets /batmanbegins.jpg" alt="Batman Begins">
+                </div>
+
+                <div class="netflixCard"
+                     data-title="The Dark Knight"
+                     data-genre="Action"
+                     data-rating="9.9"
+                     data-description="Batman faces the Joker in a battle for Gotham's future.">
+                    <img src="OSN assets /thedarkknight.jpg" alt="The Dark Knight">
+                </div>
+
+                <div class="netflixCard"
+                     data-title="The Dark Knight Rises"
+                     data-genre="Action"
+                     data-rating="10.0"
+                     data-description="Retired Batman returns to stop Bane's plan destroying Gotham.">
+                    <img src="OSN assets /thedarkknightrises.jpg" alt="The Dark Knight Rises">
+                </div>
+            </div>
+        </section>
+
+        <!-- SCI-FI -->
+        <section id="osnSciFi" class="osnSection">
+            <div class="sectionHeader">
+                <h2 class="osnSectionTitle">Sci‑Fi</h2>
+                <span>Mind‑bending stories</span>
+            </div>
+
+            <div class="netflixGrid">
+                <div class="netflixCard"
+                     data-title="Tenet"
+                     data-genre="Sci‑Fi Thriller"
+                     data-rating="9.2"
+                     data-description="A secret agent uses time inversion to stop global catastrophe.">
+                    <img src="OSN assets /tenet.jpeg" alt="Tenet">
+                </div>
+            </div>
+        </section>
+
+        <!-- THRILLER -->
+        <section id="osnThriller" class="osnSection">
+            <div class="sectionHeader">
+                <h2 class="osnSectionTitle">Thriller</h2>
+                <span>Edge‑of‑your‑seat picks</span>
+            </div>
+
+            <div class="netflixGrid">
+                <div class="netflixCard"
+                     data-title="Trap"
+                     data-genre="Thriller"
+                     data-rating="8.3"
+                     data-description="A carefully planned situation spirals violently out of control.">
+                    <img src="OSN assets /trap.jpg" alt="Trap">
+                </div>
+
+                <div class="netflixCard"
+                     data-title="Everything Everywhere All at Once"
+                     data-genre="Sci‑Fi Drama"
+                     data-rating="7.7"
+                     data-description="Multiverse adventure blending action, family drama, and absurd humor.">
+                    <img src="OSN assets /everythingeverywhereallatonce.jpg" alt="Everything Everywhere All at Once">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="osnFooter">© 2025 Your Ratings</div>
+
+    <!-- Same JS pattern as Netflix Series page -->
+    <script>
+  document.querySelectorAll(".netflixCard").forEach(card => {
+    const originalImg = card.querySelector("img");
+    if (!originalImg) return;
+
+    const title       = card.dataset.title       || "Apple TV Movie";
+    const genre       = card.dataset.genre       || "Movie";
+    const ratingRaw   = Number(card.dataset.rating || 0);
+    const rating      = Math.max(0, Math.min(10, ratingRaw));
+    const description = card.dataset.description || "A selected movie from your Apple TV collection.";
+    const imageSrc    = originalImg.getAttribute("src");
+    const imageAlt    = originalImg.getAttribute("alt") || title;
+    const scorePct    = Math.round(Math.max(0, Math.min(100, rating * 10)));
+
+    card.innerHTML = `
+      <div class="cardInner">
+        <div class="cardFront">
+          <div class="netflixCardImg">
+            <img src="${imageSrc}" alt="${imageAlt}" loading="lazy">
+            <div class="posterShade"></div>
+          </div>
+          <div class="netflixCardRating"
+               style="--score: ${scorePct};"
+               data-score="${rating.toFixed(1)}">
+            <span>${getRatingLabel(rating)}</span>
+          </div>
+        </div>
+        <div class="cardBack">
+          <p class="backEyebrow">Apple TV · Movie</p>
+          <h3>${title}</h3>
+          <p class="backDescription">${description}</p>
+          <div class="cardMeta">
+            <span>${genre}</span>
+            <span>${getRatingLabel(rating)}</span>
+            <!-- removed: <span>${rating.toFixed(1)} / 10</span> -->
+          </div>
+          <div class="backRating" style="--score: ${scorePct};">
+            <strong>${rating.toFixed(1)}</strong>
+            <small>/10</small>
+          </div>
+          <p class="tapHint">Tap again to flip back</p>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener("click", () => card.classList.toggle("is-flipped"));
+  });
+
+  function getRatingLabel(score) {
+    if (score >= 9.5) return "Legendary";
+    if (score >= 9)   return "Masterpiece";
+    if (score >= 8)   return "Excellent";
+    if (score >= 7)   return "Good";
+    if (score >= 5)   return "Average";
+    return "Low Rated";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple TV Shows</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body id="appleTvBody" data-accent="apple">
+
+    <div id="appleTvHeader">
+        <a href="index.html">
+            <img class="appleTvHeaderIcon" src="Assets/home.png" alt="Home">
+        </a>
+        <a href="NETFLIX shows.html">
+            <img class="appleTvHeaderIcon" src="Assets/Netflixs.png" alt="Netflix">
+        </a>
+        <a href="Crunchyroll shows.html">
+            <img class="appleTvHeaderIcon" src="Assets/crunchyroll.png" alt="Crunchyroll">
+        </a>
+        <a href="PRIME shows.html">
+            <img class="appleTvHeaderIcon" src="Assets/prime video.webp" alt="Prime Video">
+        </a>
+        <a>
+            <img id="appleIconApple" class="appleTvHeaderIcon appleTvMain" src="Assets/apple tv.png" alt="Apple TV">
+        </a>
+        <a href="OSN shows.html">
+            <img class="appleTvHeaderIcon" src="Assets/osn.jpg" alt="OSN">
+        </a>
+        <a href="Cinema.html">
+            <img class="appleTvHeaderIcon" src="Assets/cinema.jpg" alt="Cinema">
+        </a>
+        <a href="Others Shows.html">
+            <img class="appleTvHeaderIcon" src="Assets/others.png" alt="Others">
+        </a>
+    </div>
+
+    <main class="appleTvPage">
+
+        <section class="appleTvHero">
+            <p class="appleTvEyebrow">Your personal Apple TV collection</p>
+            <h1>Apple TV<br>Shows</h1>
+            <p>Browse your rated Apple TV shows by genre. Click any poster to flip the card and reveal more details.</p>
+        </section>
+
+        <div id="appleTvSwitch">
+            <a class="appleTvSwitchActive" href="APPLE TV shows.html">Shows</a>
+            <a class="appleTvSwitchInactive" href="APPLE TV movies.html">Movies</a>
+        </div>
+
+        <!-- THRILLER -->
+        <section id="appleTvThriller" class="appleTvSection">
+            <div class="sectionHeader">
+                <h2 class="appleTvSectionTitle">Thriller</h2>
+                <span>Crime and suspense</span>
+            </div>
+            <div class="appleTvGrid">
+                <div class="netflixCard"
+                     data-title="Black Bird"
+                     data-genre="Crime Thriller"
+                     data-rating="8.0"
+                     data-description="A drug dealer must befriend a suspected serial killer informant.">
+                    <img src="Apple tv asset/blackbird.jpg" alt="Black Bird">
+                </div>
+                <div class="netflixCard"
+                     data-title="Defending Jacob"
+                     data-genre="Crime Drama"
+                     data-rating="8.0"
+                     data-description="A family unravels when their teenage son is accused of murder.">
+                    <img src="Apple tv asset/defendingjacob.jpg" alt="Defending Jacob">
+                </div>
+                <div class="netflixCard"
+                     data-title="Presumed Innocent"
+                     data-genre="Legal Thriller"
+                     data-rating="8.7"
+                     data-description="A prosecutor becomes prime suspect in a high-profile murder case.">
+                    <img src="Apple tv asset/presumedinnocent.jpg" alt="Presumed Innocent">
+                </div>
+            </div>
+        </section>
+
+        <!-- SCI-FI -->
+        <section id="appleTvScifi" class="appleTvSection">
+            <div class="sectionHeader">
+                <h2 class="appleTvSectionTitle">Sci-Fi</h2>
+                <span>Mind-bending worlds</span>
+            </div>
+            <div class="appleTvGrid">
+                <div class="netflixCard"
+                     data-title="Dark Matter"
+                     data-genre="Sci-Fi Thriller"
+                     data-rating="9.4"
+                     data-description="A physicist is dragged into a terrifying alternate version of life.">
+                    <img src="Apple tv asset/darkmatter.jpg" alt="Dark Matter">
+                </div>
+                <div class="netflixCard"
+                     data-title="For All Mankind"
+                     data-genre="Sci-Fi Drama"
+                     data-rating="8.7"
+                     data-description="Alternate-history space race where global competition in space never ends.">
+                    <img src="Apple tv asset/forallmankind.jpg" alt="For All Mankind">
+                </div>
+                <div class="netflixCard"
+                     data-title="Severance"
+                     data-genre="Sci-Fi Mystery"
+                     data-rating="9.3"
+                     data-description="Workers with severed memories uncover a sinister corporate experiment.">
+                    <img src="Apple tv asset/severance.jpg" alt="Severance">
+                </div>
+                <div class="netflixCard"
+                     data-title="Silo"
+                     data-genre="Dystopian Sci-Fi"
+                     data-rating="9.0"
+                     data-description="Underground silo residents question the truth about their world.">
+                    <img src="Apple tv asset/silo.png" alt="Silo">
+                </div>
+            </div>
+        </section>
+
+        <!-- DRAMA -->
+        <section id="appleTvDrama" class="appleTvSection">
+            <div class="sectionHeader">
+                <h2 class="appleTvSectionTitle">Drama</h2>
+                <span>Character stories</span>
+            </div>
+            <div class="appleTvGrid">
+                <div class="netflixCard"
+                     data-title="The Last Days of Ptolemy Grey"
+                     data-genre="Drama"
+                     data-rating="9.4"
+                     data-description="A man with dementia regains memories to solve a personal mystery.">
+                    <img src="Apple tv asset/lastdayofptolemygrey.jpg" alt="The Last Days of Ptolemy Grey">
+                </div>
+                <div class="netflixCard"
+                     data-title="Trying"
+                     data-genre="Comedy Drama"
+                     data-rating="8.6"
+                     data-description="A couple navigates adoption, relationships, and building a family.">
+                    <img src="Apple tv asset/trying.jpg" alt="Trying">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="appleTvFooter">© 2025 Your Ratings</div>
+
+   <script>
+  document.querySelectorAll(".netflixCard").forEach(card => {
+    const originalImg = card.querySelector("img");
+    if (!originalImg) return;
+
+    const title       = card.dataset.title       || "Apple TV Movie";
+    const genre       = card.dataset.genre       || "Movie";
+    const ratingRaw   = Number(card.dataset.rating || 0);
+    const rating      = Math.max(0, Math.min(10, ratingRaw));
+    const description = card.dataset.description || "A selected movie from your Apple TV collection.";
+    const imageSrc    = originalImg.getAttribute("src");
+    const imageAlt    = originalImg.getAttribute("alt") || title;
+    const scorePct    = Math.round(Math.max(0, Math.min(100, rating * 10)));
+
+    card.innerHTML = `
+      <div class="cardInner">
+        <div class="cardFront">
+          <div class="netflixCardImg">
+            <img src="${imageSrc}" alt="${imageAlt}" loading="lazy">
+            <div class="posterShade"></div>
+          </div>
+          <div class="netflixCardRating"
+               style="--score: ${scorePct};"
+               data-score="${rating.toFixed(1)}">
+            <span>${getRatingLabel(rating)}</span>
+          </div>
+        </div>
+        <div class="cardBack">
+          <p class="backEyebrow">Apple TV · Movie</p>
+          <h3>${title}</h3>
+          <p class="backDescription">${description}</p>
+          <div class="cardMeta">
+            <span>${genre}</span>
+            <span>${getRatingLabel(rating)}</span>
+            <!-- removed: <span>${rating.toFixed(1)} / 10</span> -->
+          </div>
+          <div class="backRating" style="--score: ${scorePct};">
+            <strong>${rating.toFixed(1)}</strong>
+            <small>/10</small>
+          </div>
+          <p class="tapHint">Tap again to flip back</p>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener("click", () => card.classList.toggle("is-flipped"));
+  });
+
+  function getRatingLabel(score) {
+    if (score >= 9.5) return "Legendary";
+    if (score >= 9)   return "Masterpiece";
+    if (score >= 8)   return "Excellent";
+    if (score >= 7)   return "Good";
+    if (score >= 5)   return "Average";
+    return "Low Rated";
+  }
+</script>
+
+</body>
+</html>

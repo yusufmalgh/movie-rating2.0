@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Shows</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body id="primeBody" data-accent="prime">
+
+    <!-- HEADER -->
+    <div id="primeHeader">
+        <a href="index.html">
+            <img class="primeHeaderIcon" src="Assets/home.png" alt="Home">
+        </a>
+
+        <a href="NETFLIX shows.html">
+            <img class="primeHeaderIcon" src="Assets/Netflixs.png" alt="Netflix">
+        </a>
+
+        <a href="Crunchyroll shows.html">
+            <img class="primeHeaderIcon" src="Assets/crunchyroll.png" alt="Crunchyroll">
+        </a>
+
+        <!-- Active Prime icon -->
+        <a>
+            <img id="primeicon" class="primeHeaderIcon" src="Assets/prime video.webp" alt="Prime Video">
+        </a>
+
+        <a href="APPLE TV shows.html">
+            <img class="primeHeaderIcon" src="Assets/apple tv.png" alt="Apple TV">
+        </a>
+
+        <a href="OSN shows.html">
+            <img class="primeHeaderIcon" src="Assets/osn.jpg" alt="OSN">
+        </a>
+
+        <a href="Cinema.html">
+            <img class="primeHeaderIcon" src="Assets/cinema.jpg" alt="Cinema">
+        </a>
+
+        <a href="Others Shows.html">
+            <img class="othersHeaderIcon" src="Assets/others.png" alt="Others">
+        </a>
+    </div>
+
+    <main class="primePage">
+
+        <!-- HERO -->
+        <section class="primeHero">
+            <p class="primeEyebrow">Your personal Prime Video collection</p>
+            <h1>Prime Shows</h1>
+            <p>
+                Browse your rated Prime series by genre. Click any poster to flip the card and reveal more details.
+            </p>
+        </section>
+
+        <!-- SWITCH -->
+        <div id="primeSwitch">
+            <a class="primeSwitchActive" href="PRIME shows.html">Series</a>
+            <a class="primeSwitchInactive" href="PRIME movies.html">Movies</a>
+        </div>
+
+        <!-- THRILLER -->
+        <section id="primeThriller" class="primeSection">
+            <div class="sectionHeader">
+                <h2 class="primeSectionTitle">Thriller</h2>
+                <span>Hackers, crime, conspiracies</span>
+            </div>
+
+            <div class="netflixGrid">
+                <div class="netflixCard"
+                     data-title="Mr. Robot"
+                     data-genre="Tech Thriller"
+                     data-rating="11.0"
+                     data-description="Cybersecurity engineer joins a hacking revolution, battling identity and sanity.">
+                    <img src="Prime tv assets/mr.robot.jpg" alt="Mr. Robot">
+                </div>
+
+                <div class="netflixCard"
+                     data-title="Cross"
+                     data-genre="Crime Thriller"
+                     data-rating="8.4"
+                     data-description="A detective is pulled into killers, secrets, and revenge.">
+                    <img src="Prime tv assets/cross.jpg" alt="Cross">
+                </div>
+
+                <div class="netflixCard"
+                     data-title="Utopia"
+                     data-genre="Conspiracy Thriller"
+                     data-rating="8.3"
+                     data-description="Comic fans uncover a real conspiracy tied to deadly virus.">
+                    <img src="Prime tv assets/utopia.jpg" alt="Utopia">
+                </div>
+            </div>
+        </section>
+
+        <!-- SCI‑FI -->
+        <section id="primeScifi" class="primeSection">
+            <div class="sectionHeader">
+                <h2 class="primeSectionTitle">Sci‑Fi</h2>
+                <span>Future worlds and wastelands</span>
+            </div>
+
+            <div class="netflixGrid">
+                <div class="netflixCard"
+                     data-title="Fallout"
+                     data-genre="Post‑Apocalyptic Sci‑Fi"
+                     data-rating="8.9"
+                     data-description="Vault dwellers leave underground and confront the brutal wasteland above.">
+                    <img src="Prime tv assets/fallout.webp" alt="Fallout">
+                </div>
+            </div>
+        </section>
+
+        <!-- ACTION -->
+        <section id="primeAction" class="primeSection">
+            <div class="sectionHeader">
+                <h2 class="primeSectionTitle">Action</h2>
+                <span>Games and danger</span>
+            </div>
+
+            <div class="netflixGrid">
+                <div class="netflixCard"
+                     data-title="Beast Games"
+                     data-genre="Action Reality"
+                     data-rating="7.5"
+                     data-description="Contestants face extreme challenges and high‑pressure games for glory.">
+                    <img src="Prime tv assets/beastgames.jpeg" alt="Beast Games">
+                </div>
+            </div>
+        </section>
+
+        <!-- COMEDY -->
+        <section id="primeComedy" class="primeSection">
+            <div class="sectionHeader">
+                <h2 class="primeSectionTitle">Comedy</h2>
+                <span>Sharp, clever, and emotional</span>
+            </div>
+
+            <div class="netflixGrid">
+                <div class="netflixCard"
+                     data-title="Fleabag"
+                     data-genre="Dark Comedy"
+                     data-rating="9.7"
+                     data-description="Chaotic woman breaks fourth wall navigating grief, love, self‑destruction.">
+                    <img src="Prime tv assets/fleabag.jpg" alt="Fleabag">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="primeFooter">© 2025 Your Ratings</div>
+
+    <!-- Flip logic reused from Netflix Series page -->
+    <script>
+  document.querySelectorAll(".netflixCard").forEach(card => {
+    const originalImg = card.querySelector("img");
+    if (!originalImg) return;
+
+    const title       = card.dataset.title       || "Apple TV Movie";
+    const genre       = card.dataset.genre       || "Movie";
+    const ratingRaw   = Number(card.dataset.rating || 0);
+    const rating      = Math.max(0, Math.min(10, ratingRaw));
+    const description = card.dataset.description || "A selected movie from your Apple TV collection.";
+    const imageSrc    = originalImg.getAttribute("src");
+    const imageAlt    = originalImg.getAttribute("alt") || title;
+    const scorePct    = Math.round(Math.max(0, Math.min(100, rating * 10)));
+
+    card.innerHTML = `
+      <div class="cardInner">
+        <div class="cardFront">
+          <div class="netflixCardImg">
+            <img src="${imageSrc}" alt="${imageAlt}" loading="lazy">
+            <div class="posterShade"></div>
+          </div>
+          <div class="netflixCardRating"
+               style="--score: ${scorePct};"
+               data-score="${rating.toFixed(1)}">
+            <span>${getRatingLabel(rating)}</span>
+          </div>
+        </div>
+        <div class="cardBack">
+          <p class="backEyebrow">Apple TV · Movie</p>
+          <h3>${title}</h3>
+          <p class="backDescription">${description}</p>
+          <div class="cardMeta">
+            <span>${genre}</span>
+            <span>${getRatingLabel(rating)}</span>
+            <!-- removed: <span>${rating.toFixed(1)} / 10</span> -->
+          </div>
+          <div class="backRating" style="--score: ${scorePct};">
+            <strong>${rating.toFixed(1)}</strong>
+            <small>/10</small>
+          </div>
+          <p class="tapHint">Tap again to flip back</p>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener("click", () => card.classList.toggle("is-flipped"));
+  });
+
+  function getRatingLabel(score) {
+    if (score >= 9.5) return "Legendary";
+    if (score >= 9)   return "Masterpiece";
+    if (score >= 8)   return "Excellent";
+    if (score >= 7)   return "Good";
+    if (score >= 5)   return "Average";
+    return "Low Rated";
+  }
+</script>
+
+</body>
+</html>
