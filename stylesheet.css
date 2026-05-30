@@ -1664,6 +1664,8 @@ ALL MOVIES / ALL SHOWS â€“ CONTROLS & PLATFORM CHIP
 /* Controls bar: title/filters left, search + X right */
 /* All Movies / Shows controls bar */
 
+
+
 /* Right side: search + X */
 #Movies-body .allControls-right,
 #shows_BODY .allControls-right {
@@ -1680,6 +1682,18 @@ ALL MOVIES / ALL SHOWS â€“ CONTROLS & PLATFORM CHIP
   max-width: 90%;
   margin: 0;          /* remove any auto margins */
 }
+
+  /* Remove hover lift so tap only flips */
+  .netflixCard:hover .cardInner,
+  .netflixCard.is-flipped:hover .cardInner {
+    transform: none;
+  }
+
+  /* Keep press state subtle or disable it too if it still feels jumpy */
+  .netflixCard:active:not(.is-flipped) .cardInner,
+  .netflixCard.is-flipped:active .cardInner {
+    transform: none;
+  }
 
 /* X button – place at top right */
 #Movies-body .close-button,
