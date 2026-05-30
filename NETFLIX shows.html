@@ -278,62 +278,132 @@
 
     <div id="netflixFooter">© 2025 Your Ratings</div>
 
-    <script>
-  document.querySelectorAll(".netflixCard").forEach(card => {
-    const originalImg = card.querySelector("img");
-    if (!originalImg) return;
+<script>
+  (function () {
+    const body = document.body;
 
-    const title       = card.dataset.title       || "Apple TV Movie";
-    const genre       = card.dataset.genre       || "Movie";
-    const ratingRaw   = Number(card.dataset.rating || 0);
-    const rating      = Math.max(0, Math.min(10, ratingRaw));
-    const description = card.dataset.description || "A selected movie from your Apple TV collection.";
-    const imageSrc    = originalImg.getAttribute("src");
-    const imageAlt    = originalImg.getAttribute("alt") || title;
-    const scorePct    = Math.round(Math.max(0, Math.min(100, rating * 10)));
+    /* ================================
+       1) APPLY SAVED THEME
+    ================================ */
+    const savedTheme = localStorage.getItem("theme");
 
-    card.innerHTML = `
-      <div class="cardInner">
-        <div class="cardFront">
-          <div class="netflixCardImg">
-            <img src="${imageSrc}" alt="${imageAlt}" loading="lazy">
-            <div class="posterShade"></div>
+    if (savedTheme === "light" || savedTheme === "dark") {
+      body.setAttribute("data-theme", savedTheme);
+    } else {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      body.setAttribute("data-theme", prefersDark ? "dark" : "light");
+    }
+
+    /* ================================
+       2) PAGE PLATFORM DETECTION
+    ================================ */
+    const pagePlatformMap = {
+      netflixBody: "Netflix",
+      primeBody: "Prime Video",
+      appleTvBody: "Apple TV",
+      osnBody: "OSN",
+      crunchyrollBody: "Crunchyroll",
+      cenimaBody: "Cinema",
+      othersBody: "Others"
+    };
+
+    const pagePlatform = pagePlatformMap[body.id] || null;
+    const isMoviesPage = body.id === "Movies-body";
+    const isShowsPage = body.id === "shows_BODY";
+    const isMixedPage = isMoviesPage || isShowsPage;
+
+    /* ================================
+       3) BUILD FLIP CARDS
+    ================================ */
+    document.querySelectorAll(".netflixCard").forEach((card) => {
+      const originalImg = card.querySelector("img");
+      if (!originalImg) return;
+
+      const title =
+        card.dataset.title ||
+        (isMoviesPage ? "Movie" : "Show");
+
+      const genre =
+        card.dataset.genre ||
+        (isMoviesPage ? "Movie" : "Show");
+
+      const ratingRaw = Number(card.dataset.rating || 0);
+      const rating = Math.max(0, Math.min(10, ratingRaw));
+
+      const description =
+        card.dataset.description ||
+        (isMoviesPage
+          ? "A selected movie from your personal ratings collection."
+          : "A selected show from your personal ratings collection.");
+
+      const platform =
+        card.dataset.platform ||
+        pagePlatform ||
+        "Mixed Platforms";
+
+      const imageSrc = originalImg.getAttribute("src");
+      const imageAlt = originalImg.getAttribute("alt") || title;
+      const scorePct = Math.round(rating * 10);
+
+      card.dataset.platform = platform;
+
+      card.innerHTML = `
+        <div class="cardInner">
+          <div class="cardFront">
+            <div class="netflixCardImg">
+              <img src="${imageSrc}" alt="${imageAlt}" loading="lazy">
+              <div class="posterShade"></div>
+            </div>
+
+            <div
+              class="netflixCardRating"
+              style="--score: ${scorePct};"
+              data-score="${rating.toFixed(1)}"
+            >
+              <span>${getRatingLabel(rating)}</span>
+            </div>
           </div>
-          <div class="netflixCardRating"
-               style="--score: ${scorePct};"
-               data-score="${rating.toFixed(1)}">
-            <span>${getRatingLabel(rating)}</span>
+
+          <div class="cardBack">
+            <p class="backEyebrow">${platform}</p>
+
+            <h3>${title}</h3>
+
+            <p class="backDescription">${description}</p>
+
+            <div class="cardMeta">
+              <span class="metaChip metaChip-platform">${platform}</span>
+              <span>${genre}</span>
+              <span>${getRatingLabel(rating)}</span>
+            </div>
+
+            <div class="backRating" style="--score: ${scorePct};">
+              <strong>${rating.toFixed(1)}</strong>
+              <small>/10</small>
+            </div>
+
+            <p class="tapHint">Tap again to flip back</p>
           </div>
         </div>
-        <div class="cardBack">
-          <p class="backEyebrow">Apple TV · Movie</p>
-          <h3>${title}</h3>
-          <p class="backDescription">${description}</p>
-          <div class="cardMeta">
-            <span>${genre}</span>
-            <span>${getRatingLabel(rating)}</span>
-            <!-- removed: <span>${rating.toFixed(1)} / 10</span> -->
-          </div>
-          <div class="backRating" style="--score: ${scorePct};">
-            <strong>${rating.toFixed(1)}</strong>
-            <small>/10</small>
-          </div>
-          <p class="tapHint">Tap again to flip back</p>
-        </div>
-      </div>
-    `;
+      `;
 
-    card.addEventListener("click", () => card.classList.toggle("is-flipped"));
-  });
+      card.addEventListener("click", () => {
+        card.classList.toggle("is-flipped");
+      });
+    });
 
-  function getRatingLabel(score) {
-    if (score >= 9.5) return "Legendary";
-    if (score >= 9)   return "Masterpiece";
-    if (score >= 8)   return "Excellent";
-    if (score >= 7)   return "Good";
-    if (score >= 5)   return "Average";
-    return "Low Rated";
-  }
+    function getRatingLabel(score) {
+      if (score >= 9.5) return "Legendary";
+      if (score >= 9) return "Masterpiece";
+      if (score >= 8) return "Excellent";
+      if (score >= 7) return "Good";
+      if (score >= 5) return "Average";
+      return "Low Rated";
+    }
+  })();
 </script>
 
 </body>
