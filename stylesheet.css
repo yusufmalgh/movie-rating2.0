@@ -1669,7 +1669,7 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
 #homepage_NAVBAR .links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   /* pull the whole group left a bit */
   transform: translateX(-40px);
   margin-left: 40px; /* counteract the first link's left margin */
