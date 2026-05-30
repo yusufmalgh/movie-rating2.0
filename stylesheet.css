@@ -1853,7 +1853,7 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
   }
 
   .backEyebrow {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 4px;
   }
 
@@ -1879,8 +1879,8 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
   }
 
   .cardMeta span {
-    padding: 3px 5px;
-    font-size: 8px;
+    padding: 2px 4px;
+    font-size: 7px;
   }
 
   .backRating {
@@ -1929,7 +1929,7 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
 
   #allGrid {
     grid-template-columns: repeat(2, minmax(130px, 1fr));
-    gap: 25px;
+    gap: 27px;
     padding: 20px 14px 42px;
   }
 
