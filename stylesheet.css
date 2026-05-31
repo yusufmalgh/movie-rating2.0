@@ -1933,7 +1933,7 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
     display: grid;
     grid-template-columns: repeat(2, minmax(130px, 1fr));
     column-gap: 10px;       /* horizontal space between cards */
-    row-gap: 50px;          /* vertical space between rows (increase this) */
+    row-gap: 500px;          /* vertical space between rows (increase this) */
     padding: 18px 12px 36px;
   }
 
