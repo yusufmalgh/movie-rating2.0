@@ -1816,8 +1816,8 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
 
   /* Flip cards – mobile sizing (fits 2 per row on 390px) */
   .netflixCard {
-    width: 138px;       /* key: ~2 * 138 + gaps + padding ≈ 390 */
-    height: 232px;
+    width: 150px;       /* key: ~2 * 150 + gaps + padding ≈ 390 */
+    height: 245px;
     border-radius: 18px;
   }
 
@@ -1910,8 +1910,8 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
   .othersCard,
   .crunchyrollCard,
   .primeCard {
-    width: 138px;
-    height: 232px;
+    width: 150px;
+    height: 245px;
     border-radius: 18px;
   }
 
@@ -1929,15 +1929,16 @@ ALL MOVIES / ALL SHOWS Ã¢â‚¬â€œ CONTROLS & PLATFORM CHIP
     margin-top: -10px;
   }
 
-  #allGrid {
+   #allGrid {
     display: grid;
     grid-template-columns: repeat(2, minmax(130px, 1fr));
-    gap: 14px;
+    column-gap: 10px;       /* horizontal space between cards */
+    row-gap: 50px;          /* vertical space between rows (increase this) */
     padding: 18px 12px 36px;
   }
 
   #allGrid > div {
-    max-width: 138px;
+    max-width: 150px;
   }
 
   .badge {
